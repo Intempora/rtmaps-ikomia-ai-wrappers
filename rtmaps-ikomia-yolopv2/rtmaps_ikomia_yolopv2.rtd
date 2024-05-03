@@ -614,7 +614,7 @@
     <Property LongName="Player_1.update" Type="0">true</Property>
     <ReadOnlyProperty LongName="Player_1.replayPath" Type="3"><![CDATA[D:/RTMaps 4/packages/rtmaps_ibeo/samples/IBEO_Highway/]]></ReadOnlyProperty>
     <ReadOnlyProperty LongName="Player_1.comments" Type="3"><![CDATA[]]></ReadOnlyProperty>
-    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">99258</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">0</ReadOnlyProperty>
     <ReadOnlyProperty LongName="Player_1.percentage" Type="1">0</ReadOnlyProperty>
     <ReadOnlyProperty LongName="Player_1.time" Type="1">0</ReadOnlyProperty>
     <ReadOnlyProperty LongName="Player_1.first" Type="1">49673</ReadOnlyProperty>
@@ -628,7 +628,7 @@
   </Component>
   <Component InstanceName="PythonBridge_1" Model="PythonBridge" Version="4.4.7" x="848" y="560" z="0">
     <Input LongName="PythonBridge_1.img_in" Name="img_in">
-      <Property LongName="PythonBridge_1.img_in.readerType" Type="1">0</Property>
+      <Property LongName="PythonBridge_1.img_in.readerType" Type="1">2</Property>
       <Property LongName="PythonBridge_1.img_in.subsampling" Type="1">1</Property>
     </Input>
     <Output LongName="PythonBridge_1.objs_bbox" Name="objs_bbox">
@@ -649,26 +649,26 @@
     <Property LongName="PythonBridge_1.guard_begin" Type="0" SubType="128">true</Property>
     <Property LongName="PythonBridge_1.internalInputs" Type="3" SubType="128"><![CDATA[img_in;18==]]></Property>
     <Property LongName="PythonBridge_1.internalOutputs" Type="3" SubType="128"><![CDATA[objs_bbox;21==;512#objs_labels;21==;512#mask;18==;0]]></Property>
-    <Property LongName="PythonBridge_1.internalProperties" Type="3" SubType="128"><![CDATA[detect_objects||23||1#detect_road_lanes||23||1#output_image_with_graphics||23||0#conf_threshold||11||0.2#intersection_over_union_threshold||11||0.45]]></Property>
+    <Property LongName="PythonBridge_1.internalProperties" Type="3" SubType="128"><![CDATA[detect_objects||23||1#output_image_with_graphics||23||0#detect_road_lanes||23||1#conf_threshold||11||0.2#intersection_over_union_threshold||11||0.45]]></Property>
     <ReadOnlyProperty LongName="PythonBridge_1.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
     <Property LongName="PythonBridge_1.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
     <Property LongName="PythonBridge_1.capturePythonPrint" Type="0">true</Property>
     <Property LongName="PythonBridge_1.useTCPOnly" Type="0">false</Property>
-    <ReadOnlyProperty LongName="PythonBridge_1.pythonPID" Type="1">33480</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="PythonBridge_1.pythonPID" Type="1">24452</ReadOnlyProperty>
     <Property LongName="PythonBridge_1.FileSHMSize" Type="1">15000000</Property>
     <Property LongName="PythonBridge_1.useNuitka" Type="0">false</Property>
     <ReadOnlyProperty LongName="PythonBridge_1.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
     <ReadOnlyProperty LongName="PythonBridge_1.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
     <Property LongName="PythonBridge_1.className" Type="3"><![CDATA[rtmaps_python]]></Property>
     <Property LongName="PythonBridge_1.pythonExecutable" Type="3" SubType="16"><![CDATA[E:\python_venvs\ikomia\Scripts\python.exe]]></Property>
-    <Property LongName="PythonBridge_1.pythonFilename" Type="3" SubType="80"><![CDATA[D:\Demos\ikomia\rtmaps_ikomia_yolopv2.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/rtmaps_ikomia_yolopv2.py]]></Relative></Property>
+    <Property LongName="PythonBridge_1.pythonFilename" Type="3" SubType="80"><![CDATA[D:/Code/github_intempora/rtmaps-ikomia-ai-wrappers/rtmaps-ikomia-yolopv2/rtmaps_ikomia_yolopv2.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/rtmaps_ikomia_yolopv2.py]]></Relative></Property>
     <Property LongName="PythonBridge_1.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
     <Property LongName="PythonBridge_1.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
     <ReadOnlyProperty LongName="PythonBridge_1.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
     <ReadOnlyProperty LongName="PythonBridge_1.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
     <Property LongName="PythonBridge_1.detect_objects" Type="0">true</Property>
-    <Property LongName="PythonBridge_1.detect_road_lanes" Type="0">true</Property>
     <Property LongName="PythonBridge_1.output_image_with_graphics" Type="0">false</Property>
+    <Property LongName="PythonBridge_1.detect_road_lanes" Type="0">true</Property>
     <Property LongName="PythonBridge_1.conf_threshold" Type="2">0.2</Property>
     <Property LongName="PythonBridge_1.intersection_over_union_threshold" Type="2">0.45</Property>
     <Property LongName="PythonBridge_1.guard_end" Type="0" SubType="128">true</Property>
