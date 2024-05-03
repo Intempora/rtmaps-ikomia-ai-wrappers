@@ -14,7 +14,7 @@ pip install ikomia
 3. Load the .rtd example diagram in RTMaps and run.
 
 
-### YoloP v2 example
+### [YoloP v2](https://github.com/CAIC-AD/YOLOPv2) example
 ![ikomia_yolopv2_example](https://github.com/Intempora/rtmaps-ikomia-ai-wrappers/assets/2377041/95d0fcf9-0ddf-480c-b6a9-2c340e8966ea)
 
 ![image](https://github.com/Intempora/rtmaps-ikomia-ai-wrappers/assets/2377041/51a456f9-1e37-49c1-9a0f-a828908001cc)
