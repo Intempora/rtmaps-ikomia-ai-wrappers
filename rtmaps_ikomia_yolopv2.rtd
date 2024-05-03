@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.11" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="5.5.4"><![CDATA[D:/RTMaps 4/packages/rtmaps_ibeo/rtmaps_ibeo.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_ibeo/rtmaps_ibeo.pck]]></Relative></File>
+    <File Version="2.1.7"><![CDATA[D:/RTMaps 4/packages/rtmaps_image_processing_miscellaneous.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_image_processing_miscellaneous.pck]]></Relative></File>
+    <File Version="2.2.2"><![CDATA[D:/RTMaps 4/packages/rtmaps_image_processing_opencv.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_image_processing_opencv.pck]]></Relative></File>
+    <File Version="4.4.7"><![CDATA[D:/RTMaps 4/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+  </RequiredPackages>
+  <RequiredMacroPackages>
+    <File><![CDATA[D:/RTMaps 4/samples/demo_ibeo_highway.rtmc]]><Relative><![CDATA[%RTMAPS_INSTDIR%/samples/demo_ibeo_highway.rtmc]]></Relative></File>
+  </RequiredMacroPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">0</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <MacroComponent InstanceName="Videos_3D_transform_6" Model="Videos_3D_transform" x="592" y="16" z="0">
+    <PropertyOverload LongName="autoStart" Type="0">true</PropertyOverload>
+    <OutputPropertyOverload LongName="transform_matrix_1.subsampling" Type="1">1</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="transform_matrix_1.fifosize" Type="1">16</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="transform_matrix_1.periodic" Type="0">false</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="transform_matrix_2.subsampling" Type="1">1</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="transform_matrix_2.fifosize" Type="1">16</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="transform_matrix_2.periodic" Type="0">false</OutputPropertyOverload>
+  </MacroComponent>
+  <Component InstanceName="AnyColorSpaceConverter_1" Model="AnyColorSpaceConverter" Version="1.0.3" x="1208" y="384" z="0">
+    <Input LongName="AnyColorSpaceConverter_1.imgInput" Name="imgInput">
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.readerType" Type="1">0</Property>
+      <Property LongName="AnyColorSpaceConverter_1.imgInput.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="AnyColorSpaceConverter_1.IplImageOutput" Name="IplImageOutput">
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.subsampling" Type="1">1</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.fifosize" Type="1">16</Property>
+      <Property LongName="AnyColorSpaceConverter_1.IplImageOutput.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="AnyColorSpaceConverter_1.outputPixelFormat" Type="4"><![CDATA[24|1|BGR|BGRA|GRAY|I420|IYU|RGB|RGB 555|RGB 565|RGBA|UYVY|UYY|VYUY|Y211|Y41P|YUV|YUVA|YUV 411|YUV 420|YUV 422|YUY2|YUYV|YV12|YVU9|YVYU]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputPlanar" Type="0">false</Property>
+    <Property LongName="AnyColorSpaceConverter_1.outputDepth" Type="4"><![CDATA[7|1|U1|U8|S8|U16|S16|S32|F32]]></Property>
+    <Property LongName="AnyColorSpaceConverter_1.threaded" Type="0">true</Property>
+    <Property LongName="AnyColorSpaceConverter_1.priority" Type="1">128</Property>
+    <Property LongName="AnyColorSpaceConverter_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="GL2_3D_Viewer_7" Model="GL2_3D_Viewer" Version="1.57.4" x="824" y="88" z="0">
+    <Input LongName="GL2_3D_Viewer_7.object_0_data" Name="object_0_data">
+      <Property LongName="GL2_3D_Viewer_7.object_0_data.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.object_0_data.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.object_1_data" Name="object_1_data">
+      <Property LongName="GL2_3D_Viewer_7.object_1_data.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.object_1_data.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.real_objects_2" Name="real_objects_2">
+      <Property LongName="GL2_3D_Viewer_7.real_objects_2.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.real_objects_2.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.object_5_input" Name="object_5_input">
+      <Property LongName="GL2_3D_Viewer_7.object_5_input.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.object_5_input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.image_5" Name="image_5">
+      <Property LongName="GL2_3D_Viewer_7.image_5.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.image_5.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.object_6_input" Name="object_6_input">
+      <Property LongName="GL2_3D_Viewer_7.object_6_input.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.object_6_input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.image_6" Name="image_6">
+      <Property LongName="GL2_3D_Viewer_7.image_6.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.image_6.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.camera" Name="camera">
+      <Property LongName="GL2_3D_Viewer_7.camera.readerType" Type="1">4</Property>
+      <Property LongName="GL2_3D_Viewer_7.camera.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.projectionMatrix" Name="projectionMatrix">
+      <Property LongName="GL2_3D_Viewer_7.projectionMatrix.readerType" Type="1">2</Property>
+      <Property LongName="GL2_3D_Viewer_7.projectionMatrix.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="GL2_3D_Viewer_7.triggerRefresh" Name="triggerRefresh">
+      <Property LongName="GL2_3D_Viewer_7.triggerRefresh.readerType" Type="1">0</Property>
+      <Property LongName="GL2_3D_Viewer_7.triggerRefresh.subsampling" Type="1">1</Property>
+    </Input>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.objects_subsection_begin" Type="3" SubType="256"><![CDATA[Objects]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.nbObjects" Type="1">7</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_0_subsection_begin" Type="3" SubType="256"><![CDATA[Object 0]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.object_0_class" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_0_type" Type="4"><![CDATA[25|0|PointCloud|ColoredPointCloud|PointCloud (to be colorized)|Lines|ColoredLines|Triangles|ColoredTriangles|TexturedTriangles|Quads|ColoredQuads|TexturedQuads|Axis|Cube|Grid|RealObjects|Sphere|TexturedWall|Trajectory|File|Plugin|PolarGrid|Wireframe Cube|PlanarPointCloud|PlanarColoredPointCloud|PlanarPointCloud (to be colorized)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_0_transform" Type="4"><![CDATA[3|0|Matrix|Position Attitude Scale|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_0_matrix" Type="3"><![CDATA[1.0 0.0 0.0 0.0
+0.0 1.0 0.0 0.0
+0.0 0.0 1.0 0.0
+0.0 0.0 0.0 1.0
+]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_0_nb_samples" Type="1">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_0_color" Type="1" SubType="4">16777215</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_0_size" Type="2">1</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_0_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_1_subsection_begin" Type="3" SubType="256"><![CDATA[Object 1]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.object_1_class" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_type" Type="4"><![CDATA[25|4|PointCloud|ColoredPointCloud|PointCloud (to be colorized)|Lines|ColoredLines|Triangles|ColoredTriangles|TexturedTriangles|Quads|ColoredQuads|TexturedQuads|Axis|Cube|Grid|RealObjects|Sphere|TexturedWall|Trajectory|File|Plugin|PolarGrid|Wireframe Cube|PlanarPointCloud|PlanarColoredPointCloud|PlanarPointCloud (to be colorized)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_transform" Type="4"><![CDATA[3|0|Matrix|Position Attitude Scale|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_matrix" Type="3"><![CDATA[1.0 0.0 0.0 0.0
+0.0 1.0 0.0 0.0
+0.0 0.0 1.0 0.0
+0.0 0.0 0.0 1.0
+]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_nb_coords" Type="1">3</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_nb_samples" Type="1">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_size" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_color_min" Type="2">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_1_color_max" Type="2">1</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_1_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_2_subsection_begin" Type="3" SubType="256"><![CDATA[Object 2]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.object_2_class" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_2_type" Type="4"><![CDATA[25|14|PointCloud|ColoredPointCloud|PointCloud (to be colorized)|Lines|ColoredLines|Triangles|ColoredTriangles|TexturedTriangles|Quads|ColoredQuads|TexturedQuads|Axis|Cube|Grid|RealObjects|Sphere|TexturedWall|Trajectory|File|Plugin|PolarGrid|Wireframe Cube|PlanarPointCloud|PlanarColoredPointCloud|PlanarPointCloud (to be colorized)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_2_transform" Type="4"><![CDATA[3|0|Matrix|Position Attitude Scale|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_2_matrix" Type="3"><![CDATA[1.0 0.0 0.0 0.0
+0.0 1.0 0.0 0.0
+0.0 0.0 1.0 0.0
+0.0 0.0 0.0 1.0
+]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_2_shape" Type="4"><![CDATA[4|0|Cube|Pyramid|Sphere|Wireframe Cube]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_2_cfg_file" Type="3" SubType="80"><![CDATA[]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_2_persistence" Type="1" SubType="1">-1</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_2_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_3_subsection_begin" Type="3" SubType="256"><![CDATA[Object 3]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.object_3_class" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_3_type" Type="4"><![CDATA[25|13|PointCloud|ColoredPointCloud|PointCloud (to be colorized)|Lines|ColoredLines|Triangles|ColoredTriangles|TexturedTriangles|Quads|ColoredQuads|TexturedQuads|Axis|Cube|Grid|RealObjects|Sphere|TexturedWall|Trajectory|File|Plugin|PolarGrid|Wireframe Cube|PlanarPointCloud|PlanarColoredPointCloud|PlanarPointCloud (to be colorized)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_3_transform" Type="4"><![CDATA[3|0|Matrix|Position Attitude Scale|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_3_matrix" Type="3"><![CDATA[1.0 0.0 0.0 0.0
+0.0 1.0 0.0 0.0
+0.0 0.0 1.0 0.0
+0.0 0.0 0.0 1.0
+]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_3_width" Type="2">500</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_3_height" Type="2">500</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_3_padding" Type="2">5</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_3_color" Type="1" SubType="4">13816320</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_3_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_4_subsection_begin" Type="3" SubType="256"><![CDATA[Object 4]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.object_4_class" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_4_type" Type="4"><![CDATA[25|11|PointCloud|ColoredPointCloud|PointCloud (to be colorized)|Lines|ColoredLines|Triangles|ColoredTriangles|TexturedTriangles|Quads|ColoredQuads|TexturedQuads|Axis|Cube|Grid|RealObjects|Sphere|TexturedWall|Trajectory|File|Plugin|PolarGrid|Wireframe Cube|PlanarPointCloud|PlanarColoredPointCloud|PlanarPointCloud (to be colorized)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_4_transform" Type="4"><![CDATA[3|0|Matrix|Position Attitude Scale|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_4_matrix" Type="3"><![CDATA[1.0 0.0 0.0 0.0
+0.0 1.0 0.0 0.0
+0.0 0.0 1.0 0.0
+0.0 0.0 0.0 1.0
+]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_4_axis_length" Type="2">3</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_4_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_5_subsection_begin" Type="3" SubType="256"><![CDATA[Object 5]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.object_5_class" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_type" Type="4"><![CDATA[25|16|PointCloud|ColoredPointCloud|PointCloud (to be colorized)|Lines|ColoredLines|Triangles|ColoredTriangles|TexturedTriangles|Quads|ColoredQuads|TexturedQuads|Axis|Cube|Grid|RealObjects|Sphere|TexturedWall|Trajectory|File|Plugin|PolarGrid|Wireframe Cube|PlanarPointCloud|PlanarColoredPointCloud|PlanarPointCloud (to be colorized)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_transform" Type="4"><![CDATA[3|2|Matrix|Position Attitude Scale|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_wrap_s" Type="4"><![CDATA[4|0|Clamp|Clamp to border|Clamp to edge|Repeat]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_wrap_t" Type="4"><![CDATA[4|0|Clamp|Clamp to border|Clamp to edge|Repeat]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_bottom_left_u" Type="2">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_bottom_left_v" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_bottom_right_u" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_bottom_right_v" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_top_right_u" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_top_right_v" Type="2">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_top_left_u" Type="2">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_5_top_left_v" Type="2">0</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_5_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_6_subsection_begin" Type="3" SubType="256"><![CDATA[Object 6]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.object_6_class" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_type" Type="4"><![CDATA[25|16|PointCloud|ColoredPointCloud|PointCloud (to be colorized)|Lines|ColoredLines|Triangles|ColoredTriangles|TexturedTriangles|Quads|ColoredQuads|TexturedQuads|Axis|Cube|Grid|RealObjects|Sphere|TexturedWall|Trajectory|File|Plugin|PolarGrid|Wireframe Cube|PlanarPointCloud|PlanarColoredPointCloud|PlanarPointCloud (to be colorized)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_transform" Type="4"><![CDATA[3|2|Matrix|Position Attitude Scale|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_wrap_s" Type="4"><![CDATA[4|0|Clamp|Clamp to border|Clamp to edge|Repeat]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_wrap_t" Type="4"><![CDATA[4|0|Clamp|Clamp to border|Clamp to edge|Repeat]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_bottom_left_u" Type="2">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_bottom_left_v" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_bottom_right_u" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_bottom_right_v" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_top_right_u" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_top_right_v" Type="2">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_top_left_u" Type="2">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.object_6_top_left_v" Type="2">0</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.object_6_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.objects_subsection_end" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.classes_subsection_begin" Type="3" SubType="256"><![CDATA[Classes]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.classEnabledSource" Type="4"><![CDATA[2|0|Properties|Input]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.nbClasses" Type="1">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.class_0_enabled" Type="0">true</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.classes_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.lighting_subsection_begin" Type="3" SubType="256"><![CDATA[Lighting]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.lighting_model" Type="4"><![CDATA[5|0|Ambient|Diffuse|Phong|BlinnPhong|Gaussian]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.lighting_ambient_intensity" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.lighting_ambient_color" Type="1" SubType="4">16777215</Property>
+    <Property LongName="GL2_3D_Viewer_7.lighting_attenuation" Type="2">9.999999747e-005</Property>
+    <Property LongName="GL2_3D_Viewer_7.lighting_sqr_attenuation" Type="0">false</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.lighting_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.postproc_subsection_begin" Type="3" SubType="256"><![CDATA[Post-Processing]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.postprocessing_mode" Type="4"><![CDATA[3|0|None|Eye-Dome Lighting|Depth]]></Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.postproc_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.scene_subsection_begin" Type="3" SubType="256"><![CDATA[Scene]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.background_color" Type="1" SubType="4">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.wireframe_rendering" Type="0">false</Property>
+    <Property LongName="GL2_3D_Viewer_7.display_axis" Type="0">false</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.scene_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.viewport_subsection_begin" Type="3" SubType="256"><![CDATA[Viewport]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.viewportPlugin" Type="3" SubType="80"><![CDATA[]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.cameraType" Type="4"><![CDATA[7|0|Standard|Anaglyph (red-blue)|Anaglyph (red-cyan)|Anaglyph (red-green)|Anaglyph (blue-red)|Anaglyph (cyan-red)|Anaglyph (green-red)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.zFocus" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.eyeDistance" Type="2">0.009999999776</Property>
+    <Property LongName="GL2_3D_Viewer_7.camera_mode" Type="4"><![CDATA[5|3|Fixed|Key Switcher|Orbiter|Trackball|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.camera_position" Type="3"><![CDATA[-20.0 0.0 15.0]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.camera_look_at" Type="3"><![CDATA[0.0 0.0 0.0]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.camera_up" Type="3"><![CDATA[1.0 0.0 0.0]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.camera_target" Type="1">0</Property>
+    <Property LongName="GL2_3D_Viewer_7.projection" Type="4"><![CDATA[3|0|Perspective|Orthogonal|Input Matrix]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.zNear" Type="2">1</Property>
+    <Property LongName="GL2_3D_Viewer_7.zFar" Type="2">10000</Property>
+    <Property LongName="GL2_3D_Viewer_7.fovy" Type="2">45</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.viewport_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.window_subsection_begin" Type="3" SubType="256"><![CDATA[Window]]></ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.title" Type="3"><![CDATA[]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.left" Type="1">100</Property>
+    <Property LongName="GL2_3D_Viewer_7.top" Type="1">100</Property>
+    <Property LongName="GL2_3D_Viewer_7.width" Type="1">640</Property>
+    <Property LongName="GL2_3D_Viewer_7.height" Type="1">480</Property>
+    <Property LongName="GL2_3D_Viewer_7.windowBackend" Type="4"><![CDATA[1|0|Win32]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.sequentialRender" Type="0">false</Property>
+    <Property LongName="GL2_3D_Viewer_7.keepWindowAspectRatio" Type="0">true</Property>
+    <Property LongName="GL2_3D_Viewer_7.updateWinGeomOnDeath" Type="0">true</Property>
+    <Property LongName="GL2_3D_Viewer_7.alwaysOnTop" Type="0">true</Property>
+    <Property LongName="GL2_3D_Viewer_7.fullscreen" Type="0">false</Property>
+    <Property LongName="GL2_3D_Viewer_7.monitorForFullscreen" Type="4"><![CDATA[2|0|0 (0, 0, 1920, 1200)|1 (1920, 0, 1920, 1200)]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.onscreen" Type="0">true</Property>
+    <Property LongName="GL2_3D_Viewer_7.offscreen" Type="0">false</Property>
+    <Property LongName="GL2_3D_Viewer_7.antialiasing" Type="4"><![CDATA[5|0|None|FSAA 2x|FSAA 4x|FSAA 8x|FSAA 16x]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.displayTitleBar" Type="0">true</Property>
+    <Property LongName="GL2_3D_Viewer_7.displayBorders" Type="0">true</Property>
+    <Property LongName="GL2_3D_Viewer_7.refresh_mode" Type="4"><![CDATA[3|0|Fixed|On Demand|Input based]]></Property>
+    <Property LongName="GL2_3D_Viewer_7.refresh_period" Type="1">50000</Property>
+    <Property LongName="GL2_3D_Viewer_7.verbose" Type="0">false</Property>
+    <ReadOnlyProperty LongName="GL2_3D_Viewer_7.window_subsection_end" Type="0" SubType="512">false</ReadOnlyProperty>
+    <Property LongName="GL2_3D_Viewer_7.threaded" Type="0">true</Property>
+    <Property LongName="GL2_3D_Viewer_7.priority" Type="1">128</Property>
+    <Property LongName="GL2_3D_Viewer_7.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="IbeoEcuDecoder_2" Model="IbeoEcuDecoder" Version="4.8.0" x="248" y="40" z="0">
+    <Input LongName="IbeoEcuDecoder_2.input" Name="input">
+      <Property LongName="IbeoEcuDecoder_2.input.readerType" Type="1">0</Property>
+      <Property LongName="IbeoEcuDecoder_2.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="IbeoEcuDecoder_2.canMessage" Name="canMessage">
+      <Property LongName="IbeoEcuDecoder_2.canMessage.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.canMessage.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.canMessage.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanInfos" Name="scanInfos">
+      <Property LongName="IbeoEcuDecoder_2.scanInfos.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanInfos.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanInfos.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanScannerInfos" Name="scanScannerInfos">
+      <Property LongName="IbeoEcuDecoder_2.scanScannerInfos.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanScannerInfos.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanScannerInfos.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanXYZPoints" Name="scanXYZPoints">
+      <Property LongName="IbeoEcuDecoder_2.scanXYZPoints.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanXYZPoints.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanXYZPoints.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanEchoPulseWidths" Name="scanEchoPulseWidths">
+      <Property LongName="IbeoEcuDecoder_2.scanEchoPulseWidths.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanEchoPulseWidths.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanEchoPulseWidths.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanDeviceIds" Name="scanDeviceIds">
+      <Property LongName="IbeoEcuDecoder_2.scanDeviceIds.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanDeviceIds.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanDeviceIds.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanLayers" Name="scanLayers">
+      <Property LongName="IbeoEcuDecoder_2.scanLayers.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanLayers.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanLayers.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanEchos" Name="scanEchos">
+      <Property LongName="IbeoEcuDecoder_2.scanEchos.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanEchos.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanEchos.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanTimeOffsets" Name="scanTimeOffsets">
+      <Property LongName="IbeoEcuDecoder_2.scanTimeOffsets.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanTimeOffsets.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanTimeOffsets.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.scanFlags" Name="scanFlags">
+      <Property LongName="IbeoEcuDecoder_2.scanFlags.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanFlags.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.scanFlags.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.objectList" Name="objectList">
+      <Property LongName="IbeoEcuDecoder_2.objectList.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.objectList.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.objectList.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.objectListEt" Name="objectListEt">
+      <Property LongName="IbeoEcuDecoder_2.objectListEt.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.objectListEt.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.objectListEt.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.objectListEtDyn" Name="objectListEtDyn">
+      <Property LongName="IbeoEcuDecoder_2.objectListEtDyn.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.objectListEtDyn.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.objectListEtDyn.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.positionWgs84" Name="positionWgs84">
+      <Property LongName="IbeoEcuDecoder_2.positionWgs84.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.positionWgs84.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.positionWgs84.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.vehicleState" Name="vehicleState">
+      <Property LongName="IbeoEcuDecoder_2.vehicleState.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.vehicleState.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.vehicleState.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.deviceStatus" Name="deviceStatus">
+      <Property LongName="IbeoEcuDecoder_2.deviceStatus.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.deviceStatus.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.deviceStatus.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.imageInfos0" Name="imageInfos0">
+      <Property LongName="IbeoEcuDecoder_2.imageInfos0.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageInfos0.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageInfos0.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.imageStream0" Name="imageStream0">
+      <Property LongName="IbeoEcuDecoder_2.imageStream0.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageStream0.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageStream0.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.imageInfos1" Name="imageInfos1">
+      <Property LongName="IbeoEcuDecoder_2.imageInfos1.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageInfos1.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageInfos1.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoEcuDecoder_2.imageStream1" Name="imageStream1">
+      <Property LongName="IbeoEcuDecoder_2.imageStream1.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageStream1.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoEcuDecoder_2.imageStream1.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="IbeoEcuDecoder_2.displayTraceLogsNote" Type="0">false</Property>
+    <Property LongName="IbeoEcuDecoder_2.displayTraceLogsDebug" Type="0">false</Property>
+    <Property LongName="IbeoEcuDecoder_2.displayTraceLogsWarning" Type="0">false</Property>
+    <Property LongName="IbeoEcuDecoder_2.displayTraceLogsError" Type="0">false</Property>
+    <Property LongName="IbeoEcuDecoder_2.maxNbScannerInfos" Type="1">8</Property>
+    <Property LongName="IbeoEcuDecoder_2.maxNbScanPoints" Type="1">8192</Property>
+    <Property LongName="IbeoEcuDecoder_2.maxNbObjects" Type="1">128</Property>
+    <Property LongName="IbeoEcuDecoder_2.nbImages" Type="1">2</Property>
+    <Property LongName="IbeoEcuDecoder_2.deviceId0" Type="1">20</Property>
+    <Property LongName="IbeoEcuDecoder_2.imageFormat0" Type="4"><![CDATA[4|0|MJPEG|JPEG|YUV420|YUV422]]></Property>
+    <Property LongName="IbeoEcuDecoder_2.deviceId1" Type="1">21</Property>
+    <Property LongName="IbeoEcuDecoder_2.imageFormat1" Type="4"><![CDATA[4|0|MJPEG|JPEG|YUV420|YUV422]]></Property>
+    <Property LongName="IbeoEcuDecoder_2.threaded" Type="0">true</Property>
+    <Property LongName="IbeoEcuDecoder_2.priority" Type="1">128</Property>
+    <Property LongName="IbeoEcuDecoder_2.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="IbeoObjectsToMapsRealObjects_3" Model="IbeoObjectsToMapsRealObjects" Version="4.7.0" x="488" y="216" z="0">
+    <Input LongName="IbeoObjectsToMapsRealObjects_3.objects" Name="objects">
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.objects.readerType" Type="1">0</Property>
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.objects.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="IbeoObjectsToMapsRealObjects_3.dynamicObjects" Name="dynamicObjects">
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.dynamicObjects.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.dynamicObjects.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.dynamicObjects.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoObjectsToMapsRealObjects_3.staticObjects" Name="staticObjects">
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.staticObjects.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.staticObjects.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.staticObjects.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="IbeoObjectsToMapsRealObjects_3.staticObjectOutlines" Name="staticObjectOutlines">
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.staticObjectOutlines.subsampling" Type="1">1</Property>
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.staticObjectOutlines.fifosize" Type="1">16</Property>
+      <Property LongName="IbeoObjectsToMapsRealObjects_3.staticObjectOutlines.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.maxNbOutlineSegments" Type="1">700</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.maxNbDynamicObjects" Type="1">50</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.maxNbStaticObjects" Type="1">100</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.display_static_objects" Type="0">true</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.display_dynamic_objects" Type="0">true</Property>
+    <ReadOnlyProperty LongName="IbeoObjectsToMapsRealObjects_3.display_ids" Type="0">false</ReadOnlyProperty>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.display_pedestrian" Type="0">true</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.pedestrian_color" Type="1" SubType="4">65280</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.pedestrian_customRealObjectKind" Type="1">-1</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.display_cycles" Type="0">true</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.cycles_color" Type="1" SubType="4">65535</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.display_cars" Type="0">true</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.cars_color" Type="1" SubType="4">33023</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.display_trucks" Type="0">true</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.trucks_color" Type="1" SubType="4">255</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.display_unclassifiedOrUnknown" Type="0">true</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.unclassifiedOrUnknown_color" Type="1" SubType="4">8421504</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.unclassifiedOrUnknown_customRealObjectKind" Type="1">-1</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.threaded" Type="0">true</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.priority" Type="1">128</Property>
+    <Property LongName="IbeoObjectsToMapsRealObjects_3.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_1" Model="ImageViewer" Version="1.23.3" x="1488" y="392" z="0">
+    <Input LongName="ImageViewer_1.input" Name="input">
+      <Property LongName="ImageViewer_1.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_1.oMouseClick" Name="oMouseClick">
+      <Property LongName="ImageViewer_1.oMouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.oMouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.oMouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1.oROI" Name="oROI">
+      <Property LongName="ImageViewer_1.oROI.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.oROI.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.oROI.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_1.oWindowEvent" Name="oWindowEvent">
+      <Property LongName="ImageViewer_1.oWindowEvent.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_1.oWindowEvent.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_1.oWindowEvent.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_1.left" Type="1">877</Property>
+    <Property LongName="ImageViewer_1.top" Type="1">541</Property>
+    <Property LongName="ImageViewer_1.width" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.height" Type="1">0</Property>
+    <Property LongName="ImageViewer_1.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.alwaysOnTop" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.fullscreen" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.monitorForFullscreen" Type="1">1</Property>
+    <Property LongName="ImageViewer_1.displayTitleBar" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.engine" Type="4"><![CDATA[4|2|Direct Show|GDI|OpenGL|Direct Show (VMR 7)]]></Property>
+    <Property LongName="ImageViewer_1.keepAspectRatio" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.imageAspect" Type="4"><![CDATA[3|0|Anamorphic|Letterbox|Pan And Scan]]></Property>
+    <Property LongName="ImageViewer_1.windowBackend" Type="4"><![CDATA[1|0|Win32]]></Property>
+    <Property LongName="ImageViewer_1.sequentialRender" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.verbose" Type="0">false</Property>
+    <Property LongName="ImageViewer_1.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_1.priority" Type="1">128</Property>
+    <Property LongName="ImageViewer_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_8" Model="ImageViewer" Version="1.23.3" x="824" y="312" z="0">
+    <Input LongName="ImageViewer_8.input" Name="input">
+      <Property LongName="ImageViewer_8.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_8.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_8.oMouseClick" Name="oMouseClick">
+      <Property LongName="ImageViewer_8.oMouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_8.oMouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_8.oMouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_8.oROI" Name="oROI">
+      <Property LongName="ImageViewer_8.oROI.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_8.oROI.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_8.oROI.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_8.oWindowEvent" Name="oWindowEvent">
+      <Property LongName="ImageViewer_8.oWindowEvent.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_8.oWindowEvent.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_8.oWindowEvent.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_8.left" Type="1">83</Property>
+    <Property LongName="ImageViewer_8.top" Type="1">453</Property>
+    <Property LongName="ImageViewer_8.width" Type="1">0</Property>
+    <Property LongName="ImageViewer_8.height" Type="1">0</Property>
+    <Property LongName="ImageViewer_8.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_8.alwaysOnTop" Type="0">true</Property>
+    <Property LongName="ImageViewer_8.fullscreen" Type="0">false</Property>
+    <Property LongName="ImageViewer_8.monitorForFullscreen" Type="1">1</Property>
+    <Property LongName="ImageViewer_8.displayTitleBar" Type="0">true</Property>
+    <Property LongName="ImageViewer_8.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_8.engine" Type="4"><![CDATA[3|2|Direct Show|GDI|OpenGL]]></Property>
+    <Property LongName="ImageViewer_8.keepAspectRatio" Type="0">false</Property>
+    <Property LongName="ImageViewer_8.imageAspect" Type="4"><![CDATA[3|0|Anamorphic|Letterbox|Pan And Scan]]></Property>
+    <Property LongName="ImageViewer_8.windowBackend" Type="4"><![CDATA[1|0|Win32]]></Property>
+    <Property LongName="ImageViewer_8.sequentialRender" Type="0">false</Property>
+    <Property LongName="ImageViewer_8.verbose" Type="0">false</Property>
+    <Property LongName="ImageViewer_8.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_8.priority" Type="1">128</Property>
+    <Property LongName="ImageViewer_8.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="ImageViewer_9" Model="ImageViewer" Version="1.23.3" x="824" y="416" z="0">
+    <Input LongName="ImageViewer_9.input" Name="input">
+      <Property LongName="ImageViewer_9.input.readerType" Type="1">2</Property>
+      <Property LongName="ImageViewer_9.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="ImageViewer_9.oMouseClick" Name="oMouseClick">
+      <Property LongName="ImageViewer_9.oMouseClick.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_9.oMouseClick.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_9.oMouseClick.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_9.oROI" Name="oROI">
+      <Property LongName="ImageViewer_9.oROI.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_9.oROI.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_9.oROI.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="ImageViewer_9.oWindowEvent" Name="oWindowEvent">
+      <Property LongName="ImageViewer_9.oWindowEvent.subsampling" Type="1">1</Property>
+      <Property LongName="ImageViewer_9.oWindowEvent.fifosize" Type="1">16</Property>
+      <Property LongName="ImageViewer_9.oWindowEvent.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="ImageViewer_9.left" Type="1">1033</Property>
+    <Property LongName="ImageViewer_9.top" Type="1">212</Property>
+    <Property LongName="ImageViewer_9.width" Type="1">0</Property>
+    <Property LongName="ImageViewer_9.height" Type="1">0</Property>
+    <Property LongName="ImageViewer_9.autoResize" Type="0">true</Property>
+    <Property LongName="ImageViewer_9.alwaysOnTop" Type="0">true</Property>
+    <Property LongName="ImageViewer_9.fullscreen" Type="0">false</Property>
+    <Property LongName="ImageViewer_9.monitorForFullscreen" Type="1">1</Property>
+    <Property LongName="ImageViewer_9.displayTitleBar" Type="0">true</Property>
+    <Property LongName="ImageViewer_9.displayBorder" Type="0">true</Property>
+    <Property LongName="ImageViewer_9.engine" Type="4"><![CDATA[3|2|Direct Show|GDI|OpenGL]]></Property>
+    <Property LongName="ImageViewer_9.keepAspectRatio" Type="0">false</Property>
+    <Property LongName="ImageViewer_9.imageAspect" Type="4"><![CDATA[3|0|Anamorphic|Letterbox|Pan And Scan]]></Property>
+    <Property LongName="ImageViewer_9.windowBackend" Type="4"><![CDATA[1|0|Win32]]></Property>
+    <Property LongName="ImageViewer_9.sequentialRender" Type="0">false</Property>
+    <Property LongName="ImageViewer_9.verbose" Type="0">false</Property>
+    <Property LongName="ImageViewer_9.threaded" Type="0">true</Property>
+    <Property LongName="ImageViewer_9.priority" Type="1">128</Property>
+    <Property LongName="ImageViewer_9.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="OpenCV_Add_1" Model="OpenCV_Add" Version="2.0.3" x="1312" y="528" z="0">
+    <Input LongName="OpenCV_Add_1.imageIn1" Name="imageIn1">
+      <Property LongName="OpenCV_Add_1.imageIn1.readerType" Type="1">0</Property>
+      <Property LongName="OpenCV_Add_1.imageIn1.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="OpenCV_Add_1.imageIn2" Name="imageIn2">
+      <Property LongName="OpenCV_Add_1.imageIn2.readerType" Type="1">0</Property>
+      <Property LongName="OpenCV_Add_1.imageIn2.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="OpenCV_Add_1.imageOut" Name="imageOut">
+      <Property LongName="OpenCV_Add_1.imageOut.subsampling" Type="1">1</Property>
+      <Property LongName="OpenCV_Add_1.imageOut.fifosize" Type="1">16</Property>
+      <Property LongName="OpenCV_Add_1.imageOut.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="OpenCV_Add_1.image1_weight" Type="2">1</Property>
+    <Property LongName="OpenCV_Add_1.image2_weight" Type="2">1</Property>
+    <Property LongName="OpenCV_Add_1.addedm_scalar" Type="1">0</Property>
+    <Property LongName="OpenCV_Add_1.inputs_reader_mode" Type="4"><![CDATA[3|0|Synchronized|Triggered by First Input|Reactive]]></Property>
+    <Property LongName="OpenCV_Add_1.synchro_tolerance" Type="1">0</Property>
+    <Property LongName="OpenCV_Add_1.threaded" Type="0">true</Property>
+    <Property LongName="OpenCV_Add_1.priority" Type="1">128</Property>
+    <Property LongName="OpenCV_Add_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="OverlayDrawing_1" Model="OverlayDrawing" Version="5.6.3" x="1032" y="384" z="0">
+    <Input LongName="OverlayDrawing_1.input" Name="input">
+      <Property LongName="OverlayDrawing_1.input.readerType" Type="1">0</Property>
+      <Property LongName="OverlayDrawing_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="OverlayDrawing_1.drawingObjects" Name="drawingObjects">
+      <Property LongName="OverlayDrawing_1.drawingObjects.readerType" Type="1">0</Property>
+      <Property LongName="OverlayDrawing_1.drawingObjects.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="OverlayDrawing_1.drawingObjects2" Name="drawingObjects2">
+      <Property LongName="OverlayDrawing_1.drawingObjects2.readerType" Type="1">0</Property>
+      <Property LongName="OverlayDrawing_1.drawingObjects2.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="OverlayDrawing_1.output" Name="output">
+      <Property LongName="OverlayDrawing_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="OverlayDrawing_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="OverlayDrawing_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="OverlayDrawing_1.nbDrawingObjectsInputs" Type="1">2</Property>
+    <Property LongName="OverlayDrawing_1.imagePriority" Type="0">true</Property>
+    <Property LongName="OverlayDrawing_1.synchronized" Type="0">true</Property>
+    <Property LongName="OverlayDrawing_1.synchroTolerance" Type="1">0</Property>
+    <Property LongName="OverlayDrawing_1.scale" Type="2">1</Property>
+    <Property LongName="OverlayDrawing_1.xOffset" Type="1">0</Property>
+    <Property LongName="OverlayDrawing_1.yOffset" Type="1">0</Property>
+    <Property LongName="OverlayDrawing_1.threaded" Type="0">true</Property>
+    <Property LongName="OverlayDrawing_1.priority" Type="1">128</Property>
+    <Property LongName="OverlayDrawing_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="Player_1" Model="Player" Version="2.15.3" x="24" y="40" z="0">
+    <Output LongName="Player_1.IbeoIdcFile_1.output" Name="IbeoIdcFile_1.output">
+      <Property LongName="Player_1.IbeoIdcFile_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.fifosize" Type="1">32</Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.periodic" Type="0">false</Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.replayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.fastReplayPath" Type="3" SubType="96"><![CDATA[]]></Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.replayMode" Type="4"><![CDATA[3|0|Normal|Immediate|Timestamp]]></Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.autopause" Type="0">false</Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.threaded" Type="0">false</Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.priority" Type="1">128</Property>
+      <Property LongName="Player_1.IbeoIdcFile_1.output.replayThreadPriority" Type="1">128</Property>
+    </Output>
+    <Property LongName="Player_1.file" Type="3" SubType="80"><![CDATA[D:/RTMaps 4/packages/rtmaps_ibeo/samples/IBEO_Highway/IBEO_Highway_20140922_190437.rec]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_ibeo/samples/IBEO_Highway/IBEO_Highway_20140922_190437.rec]]></Relative></Property>
+    <Property LongName="Player_1.offset" Type="1">0</Property>
+    <Property LongName="Player_1.beginning" Type="1">0</Property>
+    <Property LongName="Player_1.end" Type="1">0</Property>
+    <Property LongName="Player_1.timelag" Type="1">100000</Property>
+    <Property LongName="Player_1.update" Type="0">true</Property>
+    <ReadOnlyProperty LongName="Player_1.replayPath" Type="3"><![CDATA[D:/RTMaps 4/packages/rtmaps_ibeo/samples/IBEO_Highway/]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.comments" Type="3"><![CDATA[]]></ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.ahead" Type="1">99258</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.percentage" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.time" Type="1">0</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.first" Type="1">49673</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="Player_1.last" Type="1">49690677</ReadOnlyProperty>
+    <Property LongName="Player_1.serverThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.mainClientThreadPriority" Type="1">200</Property>
+    <Property LongName="Player_1.playerMode" Type="4"><![CDATA[2|0|Single file|Files list]]></Property>
+    <Property LongName="Player_1.threaded" Type="0">true</Property>
+    <Property LongName="Player_1.priority" Type="1">200</Property>
+    <Property LongName="Player_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="PythonBridge_1" Model="PythonBridge" Version="4.4.7" x="848" y="560" z="0">
+    <Input LongName="PythonBridge_1.img_in" Name="img_in">
+      <Property LongName="PythonBridge_1.img_in.readerType" Type="1">0</Property>
+      <Property LongName="PythonBridge_1.img_in.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="PythonBridge_1.objs_bbox" Name="objs_bbox">
+      <Property LongName="PythonBridge_1.objs_bbox.subsampling" Type="1">1</Property>
+      <Property LongName="PythonBridge_1.objs_bbox.fifosize" Type="1">16</Property>
+      <Property LongName="PythonBridge_1.objs_bbox.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="PythonBridge_1.objs_labels" Name="objs_labels">
+      <Property LongName="PythonBridge_1.objs_labels.subsampling" Type="1">1</Property>
+      <Property LongName="PythonBridge_1.objs_labels.fifosize" Type="1">16</Property>
+      <Property LongName="PythonBridge_1.objs_labels.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="PythonBridge_1.mask" Name="mask">
+      <Property LongName="PythonBridge_1.mask.subsampling" Type="1">1</Property>
+      <Property LongName="PythonBridge_1.mask.fifosize" Type="1">16</Property>
+      <Property LongName="PythonBridge_1.mask.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="PythonBridge_1.guard_begin" Type="0" SubType="128">true</Property>
+    <Property LongName="PythonBridge_1.internalInputs" Type="3" SubType="128"><![CDATA[img_in;18==]]></Property>
+    <Property LongName="PythonBridge_1.internalOutputs" Type="3" SubType="128"><![CDATA[objs_bbox;21==;512#objs_labels;21==;512#mask;18==;0]]></Property>
+    <Property LongName="PythonBridge_1.internalProperties" Type="3" SubType="128"><![CDATA[detect_objects||23||1#detect_road_lanes||23||1#output_image_with_graphics||23||0#conf_threshold||11||0.2#intersection_over_union_threshold||11||0.45]]></Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+    <Property LongName="PythonBridge_1.capturePythonPrint" Type="0">true</Property>
+    <Property LongName="PythonBridge_1.useTCPOnly" Type="0">false</Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.pythonPID" Type="1">33480</ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.FileSHMSize" Type="1">15000000</Property>
+    <Property LongName="PythonBridge_1.useNuitka" Type="0">false</Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="PythonBridge_1.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.className" Type="3"><![CDATA[rtmaps_python]]></Property>
+    <Property LongName="PythonBridge_1.pythonExecutable" Type="3" SubType="16"><![CDATA[E:\python_venvs\ikomia\Scripts\python.exe]]></Property>
+    <Property LongName="PythonBridge_1.pythonFilename" Type="3" SubType="80"><![CDATA[D:\Demos\ikomia\rtmaps_ikomia_yolopv2.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/rtmaps_ikomia_yolopv2.py]]></Relative></Property>
+    <Property LongName="PythonBridge_1.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+    <Property LongName="PythonBridge_1.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="PythonBridge_1.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.detect_objects" Type="0">true</Property>
+    <Property LongName="PythonBridge_1.detect_road_lanes" Type="0">true</Property>
+    <Property LongName="PythonBridge_1.output_image_with_graphics" Type="0">false</Property>
+    <Property LongName="PythonBridge_1.conf_threshold" Type="2">0.2</Property>
+    <Property LongName="PythonBridge_1.intersection_over_union_threshold" Type="2">0.45</Property>
+    <Property LongName="PythonBridge_1.guard_end" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="PythonBridge_1.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="PythonBridge_1.threaded" Type="0">true</Property>
+    <Property LongName="PythonBridge_1.priority" Type="1">128</Property>
+    <Property LongName="PythonBridge_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="video_stream_decoder_4" Model="video_stream_decoder" Version="1.12.1" x="488" y="312" z="0">
+    <Input LongName="video_stream_decoder_4.input_stream" Name="input_stream">
+      <Property LongName="video_stream_decoder_4.input_stream.readerType" Type="1">1</Property>
+      <Property LongName="video_stream_decoder_4.input_stream.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="video_stream_decoder_4.output" Name="output">
+      <Property LongName="video_stream_decoder_4.output.subsampling" Type="1">1</Property>
+      <Property LongName="video_stream_decoder_4.output.fifosize" Type="1">16</Property>
+      <Property LongName="video_stream_decoder_4.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="video_stream_decoder_4.input_type" Type="4"><![CDATA[2|0|Stream8|MAPSImage]]></Property>
+    <Property LongName="video_stream_decoder_4.video_codec" Type="4"><![CDATA[138|61|aasc|amv|anm|ansi|asv1|asv2|aura|aura2|avs|bethsoftvid|bfi|binkvideo|bmp|c93|cavs|cdgraphics|cinepak|cljr|camstudio|cyuv|dfa|dnxhd|dpx|dsicinvideo|dvvideo|eacmv|eamad|eatgq|eatgv|eatqi|8bps|escape124|ffv1|ffvhuff|flic|flv|4xm|fraps|frwu|gif|h261|h263|h263i|h264|huffyuv|idcinvideo|iff_byterun1|iff_ilbm|indeo2|indeo3|indeo5|interplayvideo|j2k|jpegls|jv|kgv1|kmvc|lagarith|loco|mdec|mimic|mjpeg|mjpegb|mmvideo|motionpixels|mpeg1video|mpeg2video|mpeg4|mpegvideo|msmpeg4v1|msmpeg4v2|msmpeg4|msrle|msvideo1|mszh|mxpeg|nuv|pam|pbm|pcx|pgm|pgmyuv|pictor|ppm|ptx|qdraw|qpeg|qtrle|r10k|r210|rawvideo|rl2|roqvideo|rpza|rv10|rv20|rv30|rv40|sgi|smackvid|smc|snow|sp5x|sunrast|svq1|svq3|targa|theora|thp|tiertexseqvideo|tiff|tmv|truemotion1|truemotion2|txd|ultimotion|v210|v210x|vb|vc1|vcr1|vmdvideo|vmnc|vp3|vp5|vp6|vp6a|vp6f|vp8|vqavideo|wmv1|wmv2|wmv3|wnv1|xan_wc3|xan_wc4|xl|yop]]></Property>
+    <Property LongName="video_stream_decoder_4.width" Type="1">640</Property>
+    <Property LongName="video_stream_decoder_4.height" Type="1">480</Property>
+    <Property LongName="video_stream_decoder_4.ignore_quality" Type="0">true</Property>
+    <Property LongName="video_stream_decoder_4.flush_buffers_on_backward_jump" Type="0">true</Property>
+    <Property LongName="video_stream_decoder_4.threaded" Type="0">true</Property>
+    <Property LongName="video_stream_decoder_4.priority" Type="1">128</Property>
+    <Property LongName="video_stream_decoder_4.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="video_stream_decoder_5" Model="video_stream_decoder" Version="1.12.1" x="488" y="416" z="0">
+    <Input LongName="video_stream_decoder_5.input_stream" Name="input_stream">
+      <Property LongName="video_stream_decoder_5.input_stream.readerType" Type="1">1</Property>
+      <Property LongName="video_stream_decoder_5.input_stream.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="video_stream_decoder_5.output" Name="output">
+      <Property LongName="video_stream_decoder_5.output.subsampling" Type="1">1</Property>
+      <Property LongName="video_stream_decoder_5.output.fifosize" Type="1">16</Property>
+      <Property LongName="video_stream_decoder_5.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="video_stream_decoder_5.input_type" Type="4"><![CDATA[2|0|Stream8|MAPSImage]]></Property>
+    <Property LongName="video_stream_decoder_5.video_codec" Type="4"><![CDATA[138|61|aasc|amv|anm|ansi|asv1|asv2|aura|aura2|avs|bethsoftvid|bfi|binkvideo|bmp|c93|cavs|cdgraphics|cinepak|cljr|camstudio|cyuv|dfa|dnxhd|dpx|dsicinvideo|dvvideo|eacmv|eamad|eatgq|eatgv|eatqi|8bps|escape124|ffv1|ffvhuff|flic|flv|4xm|fraps|frwu|gif|h261|h263|h263i|h264|huffyuv|idcinvideo|iff_byterun1|iff_ilbm|indeo2|indeo3|indeo5|interplayvideo|j2k|jpegls|jv|kgv1|kmvc|lagarith|loco|mdec|mimic|mjpeg|mjpegb|mmvideo|motionpixels|mpeg1video|mpeg2video|mpeg4|mpegvideo|msmpeg4v1|msmpeg4v2|msmpeg4|msrle|msvideo1|mszh|mxpeg|nuv|pam|pbm|pcx|pgm|pgmyuv|pictor|ppm|ptx|qdraw|qpeg|qtrle|r10k|r210|rawvideo|rl2|roqvideo|rpza|rv10|rv20|rv30|rv40|sgi|smackvid|smc|snow|sp5x|sunrast|svq1|svq3|targa|theora|thp|tiertexseqvideo|tiff|tmv|truemotion1|truemotion2|txd|ultimotion|v210|v210x|vb|vc1|vcr1|vmdvideo|vmnc|vp3|vp5|vp6|vp6a|vp6f|vp8|vqavideo|wmv1|wmv2|wmv3|wnv1|xan_wc3|xan_wc4|xl|yop]]></Property>
+    <Property LongName="video_stream_decoder_5.width" Type="1">640</Property>
+    <Property LongName="video_stream_decoder_5.height" Type="1">480</Property>
+    <Property LongName="video_stream_decoder_5.ignore_quality" Type="0">true</Property>
+    <Property LongName="video_stream_decoder_5.flush_buffers_on_backward_jump" Type="0">true</Property>
+    <Property LongName="video_stream_decoder_5.threaded" Type="0">true</Property>
+    <Property LongName="video_stream_decoder_5.priority" Type="1">128</Property>
+    <Property LongName="video_stream_decoder_5.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="YUV2RGB_1" Model="YUV2RGB" Version="2.2.2" x="608" y="544" z="0">
+    <Input LongName="YUV2RGB_1.input" Name="input">
+      <Property LongName="YUV2RGB_1.input.readerType" Type="1">0</Property>
+      <Property LongName="YUV2RGB_1.input.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="YUV2RGB_1.output" Name="output">
+      <Property LongName="YUV2RGB_1.output.subsampling" Type="1">1</Property>
+      <Property LongName="YUV2RGB_1.output.fifosize" Type="1">16</Property>
+      <Property LongName="YUV2RGB_1.output.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="YUV2RGB_1.planar" Type="0">false</Property>
+    <Property LongName="YUV2RGB_1.threaded" Type="0">true</Property>
+    <Property LongName="YUV2RGB_1.priority" Type="1">128</Property>
+    <Property LongName="YUV2RGB_1.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="OverlayDrawing_1.output" Input="AnyColorSpaceConverter_1.imgInput"/>
+  <Connection Output="IbeoEcuDecoder_2.scanXYZPoints" Input="GL2_3D_Viewer_7.object_0_data"/>
+  <Connection Output="IbeoObjectsToMapsRealObjects_3.staticObjectOutlines" Input="GL2_3D_Viewer_7.object_1_data"/>
+  <Connection Output="IbeoObjectsToMapsRealObjects_3.dynamicObjects" Input="GL2_3D_Viewer_7.real_objects_2"/>
+  <Connection Output="Videos_3D_transform_6.transform_matrix_1" Input="GL2_3D_Viewer_7.object_5_input"/>
+  <Connection Output="video_stream_decoder_4.output" Input="GL2_3D_Viewer_7.image_5"/>
+  <Connection Output="Videos_3D_transform_6.transform_matrix_2" Input="GL2_3D_Viewer_7.object_6_input"/>
+  <Connection Output="video_stream_decoder_5.output" Input="GL2_3D_Viewer_7.image_6"/>
+  <Connection Output="Player_1.IbeoIdcFile_1.output" Input="IbeoEcuDecoder_2.input">
+    <Replay Method="ibeo_idc"/>
+  </Connection>
+  <Connection Output="IbeoEcuDecoder_2.objectListEt" Input="IbeoObjectsToMapsRealObjects_3.objects"/>
+  <Connection Output="OpenCV_Add_1.imageOut" Input="ImageViewer_1.input"/>
+  <Connection Output="video_stream_decoder_4.output" Input="ImageViewer_8.input"/>
+  <Connection Output="video_stream_decoder_5.output" Input="ImageViewer_9.input"/>
+  <Connection Output="AnyColorSpaceConverter_1.IplImageOutput" Input="OpenCV_Add_1.imageIn1"/>
+  <Connection Output="PythonBridge_1.mask" Input="OpenCV_Add_1.imageIn2"/>
+  <Connection Output="YUV2RGB_1.output" Input="OverlayDrawing_1.input"/>
+  <Connection Output="PythonBridge_1.objs_bbox" Input="OverlayDrawing_1.drawingObjects"/>
+  <Connection Output="PythonBridge_1.objs_labels" Input="OverlayDrawing_1.drawingObjects2"/>
+  <Connection Output="YUV2RGB_1.output" Input="PythonBridge_1.img_in"/>
+  <Connection Output="IbeoEcuDecoder_2.imageStream0" Input="video_stream_decoder_4.input_stream"/>
+  <Connection Output="IbeoEcuDecoder_2.imageStream1" Input="video_stream_decoder_5.input_stream"/>
+  <Connection Output="video_stream_decoder_5.output" Input="YUV2RGB_1.input"/>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="AnyColorSpaceConverter_1_1_2" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Driver_Camera_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="GL2_3D_Viewer_7" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="IbeoEcuDecoder_2" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="IbeoObjectsToMapsRealObjects_3" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_1_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_8" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="ImageViewer_9" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Player_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="PythonBridge_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Rear_Camera_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="threshold_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="total_num_objects_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_1_1_1_1" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_4" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="video_stream_decoder_5" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ComponentBox InstanceName="Videos_3D_transform_6" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="adapt_color_map.input" color="0"/>
+    <ConnectionShape InstanceName="adapt_color_map_1.input" color="0"/>
+    <ConnectionShape InstanceName="AnyColorSpaceConverter_1.imgInput" color="0"/>
+    <ConnectionShape InstanceName="CANDecoder_1.input" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="cur_num_objects_1.input_2" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_0" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_1" color="0"/>
+    <ConnectionShape InstanceName="CurrentNumObjects.input_2" color="0"/>
+    <ConnectionShape InstanceName="delphi_esr_radar_1_1.canFrame" color="0"/>
+    <ConnectionShape InstanceName="delphi_esr_radar_targets_to_realobjs_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="dropout.input0" color="0"/>
+    <ConnectionShape InstanceName="dropout_rate.input" color="0"/>
+    <ConnectionShape InstanceName="dropout_rate_1.input" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics.input_0" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics.input_1" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="dropout_statistics_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_1.input" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_Display_1.drawingObjects_1" color="0"/>
+    <ConnectionShape InstanceName="Front_Camera_Display_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="Get_Timestamps_1.input" color="0"/>
+    <ConnectionShape InstanceName="GL2_3D_Viewer_7.image_5" color="0"/>
+    <ConnectionShape InstanceName="GL2_3D_Viewer_7.image_6" color="0"/>
+    <ConnectionShape InstanceName="GL2_3D_Viewer_7.object_0_data" color="0"/>
+    <ConnectionShape InstanceName="GL2_3D_Viewer_7.object_1_data" color="0"/>
+    <ConnectionShape InstanceName="GL2_3D_Viewer_7.object_5_input" color="0"/>
+    <ConnectionShape InstanceName="GL2_3D_Viewer_7.object_6_input" color="0"/>
+    <ConnectionShape InstanceName="GL2_3D_Viewer_7.real_objects_2" color="0"/>
+    <ConnectionShape InstanceName="gps.iStream8" color="0"/>
+    <ConnectionShape InstanceName="IbeoEcuDecoder_2.input" color="0"/>
+    <ConnectionShape InstanceName="IbeoObjectsToMapsRealObjects_3.objects" color="0"/>
+    <ConnectionShape InstanceName="image_viewer.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="image_viewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="image_viewer_2.iDrawingObjects" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_1_1_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_2.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_8.input" color="0"/>
+    <ConnectionShape InstanceName="ImageViewer_9.input" color="0"/>
+    <ConnectionShape InstanceName="novelty_module.image_in" color="0"/>
+    <ConnectionShape InstanceName="novelty_module.threshold" color="0"/>
+    <ConnectionShape InstanceName="object_detection_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.image_in" color="0"/>
+    <ConnectionShape InstanceName="ObjectDetection.threshold" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_Add_1.imageIn1" color="0"/>
+    <ConnectionShape InstanceName="OpenCV_Add_1.imageIn2" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.drawingObjects2" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1.input" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1_1.drawingObjects" color="0"/>
+    <ConnectionShape InstanceName="OverlayDrawing_1_1.input" color="0"/>
+    <ConnectionShape InstanceName="Projection2_1_1.real_objects" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.img_in" color="0"/>
+    <ConnectionShape InstanceName="rear_camera.input_stream" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_188_CAN_VEH_Speed.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_190_CAN_VEH_Accel_Pedal_Demand.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_190_CAN_VEH_Brake_Pedal_Pos.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_390_CAN_VEH_U_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_481_CAN_VEH_Park_Brake_State.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_485_CAN_VEH_Steering_Angle.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_497_CAN_VEH_Heat_AC_Disable.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_501_CAN_VEH_PNRDL.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.CANDecoder_1.CAN_VEH_711_CAN_VEH_I_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.front_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.gps.position_lla.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.Bypass_TagsFromRTag.output_1.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN4_Measures_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN5_IMU_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.CAN6_Vehicle_1.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.FlexCard_CAN_Delphi_ESR_Radar.o_can.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.SerialPort_Ublox_NMEA.streamOutput.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.Player_1.UDPSocket_Velodyne_VLP16.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.rear_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.recording.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="RecFile_1.video_stream_decoder_1_1_1_1.output.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_188_CAN_VEH_Speed.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_190_CAN_VEH_Accel_Pedal_Demand.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_190_CAN_VEH_Brake_Pedal_Pos.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_390_CAN_VEH_U_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_481_CAN_VEH_Park_Brake_State.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_485_CAN_VEH_Steering_Angle.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_497_CAN_VEH_Heat_AC_Disable.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_501_CAN_VEH_PNRDL.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.CANDecoder_1.CAN_VEH_711_CAN_VEH_I_Bat_HV.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.front_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.gps.position_lla.input" color="0"/>
+    <ConnectionShape InstanceName="Recorder.rear_camera.output.input" color="0"/>
+    <ConnectionShape InstanceName="recording.input" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction.image_in" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction.threshold" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction_1.image_in" color="0"/>
+    <ConnectionShape InstanceName="redundancy_reduction_1.threshold" color="0"/>
+    <ConnectionShape InstanceName="SampleRate_2.input" color="0"/>
+    <ConnectionShape InstanceName="stream_to_frame.input_stream" color="0"/>
+    <ConnectionShape InstanceName="stream_to_frame_1.input_stream" color="0"/>
+    <ConnectionShape InstanceName="TextViewer_1.input" color="0"/>
+    <ConnectionShape InstanceName="timestamp_to_timestring_1.timestamp_usec" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_0" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_1" color="0"/>
+    <ConnectionShape InstanceName="total_num_objects_1.input_2" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_0" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_1" color="0"/>
+    <ConnectionShape InstanceName="TotalNumObjects.input_2" color="0"/>
+    <ConnectionShape InstanceName="video_stream_decoder_1.input_stream" color="0"/>
+    <ConnectionShape InstanceName="video_stream_decoder_4.input_stream" color="0"/>
+    <ConnectionShape InstanceName="video_stream_decoder_5.input_stream" color="0"/>
+    <ConnectionShape InstanceName="YUV2RGB_1.input" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>
