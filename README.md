@@ -3,7 +3,7 @@ Examples to wrap AI models from the community thanks to the unified [Ikomia API]
 
 Various other models can be found on the [Ikomia HUB](https://app.ikomia.ai/hub/).
 
-## **🚀 Getting Started**
+## **Getting Started**
 
 ### **Installation**
 1. Install RTMaps, including the RTMaps samples
